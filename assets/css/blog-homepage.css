@@ -1,0 +1,430 @@
+html,body {
+    /* margin: 10px; */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0px;
+    overflow-x: hidden ; 
+  }
+nav {
+    background-color: #00caca;
+    color: white;
+    padding: 9px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav a {
+    color: rgb(131, 127, 127);
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #333;
+}
+
+.header {
+    background-color: white;
+    height: 105px;
+    display: grid;
+    grid-template-columns: 300px 400px;
+    grid-gap: 15px;
+    grid-template-areas:
+        "img img img img img home";
+}
+
+.header img {
+    /* height: 100px; */
+    grid-area: img;
+    height: auto;
+    display: block;
+}
+
+.header a {
+    color: rgb(131, 127, 127);
+    text-decoration: none;
+}
+
+.header li {
+    color: rgb(131, 127, 127);
+    text-decoration: none;
+    padding: 15px;
+}
+
+.header li:hover,
+.header li:hover a {
+    background: #00caca;
+    color: rgb(61, 59, 59);
+
+}
+
+.Links {
+    grid-area: home;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 15px;
+    margin-bottom: 15px;
+    grid-template-areas:
+        "card1 card2"
+        "card3 card4 ";
+}
+
+#card1 {
+    grid-area: card1;
+    background-color: #00caca;
+    display: grid;
+    min-width: 60%;
+    max-width: 650px;
+    padding: 10px 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "image detail";
+}
+
+#card2 {
+    grid-area: card2;
+    display: grid;
+    background-color: #0080de;
+    min-width: 60%;
+    max-width: 650px;
+    padding: 10px 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "image detail";
+}
+
+#card3 {
+    grid-area: card3;
+    background-color: #ff3165;
+    display: grid;
+    min-width: 60%;
+    max-width: 650px;
+    padding: 10px 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "image detail";
+}
+
+#card4 {
+    background-color: #ffc100;
+    grid-area: card4;
+    display: grid;
+    min-width: 60%;
+    max-width: 650px;
+    padding: 10px 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "image detail";
+}
+
+.im {
+    grid-area: image;
+    width: 300px;
+    height: 230px;
+    display: block;
+    border-radius: 5px;
+
+}
+
+.info {
+    grid-area: detail;
+    font-weight: bold;
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+footer {
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+.links a {
+    display: inline;
+    margin: 5px;
+    text-decoration: none;
+
+}
+
+@media (max-width:300px) {
+
+    nav ul{
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    .header {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 200px;
+        grid-gap: 1em;
+        align-items: center;
+        justify-content: center;
+        grid-template-areas:
+            "img"
+            "home";
+    }
+
+    .header img {
+        width: 65%;
+        margin: auto;
+
+    }
+
+    .Links {
+        padding: 0%;
+        padding-bottom: 20px;
+    }
+
+    .cards {
+        /* padding-right: 10px; */
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto ;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4";
+    }
+
+    
+    #card1,
+    #card2,
+    #card3,
+    #card4 {
+    min-width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "image"
+        "detail";
+    }
+    
+    .im {
+    grid-area: image;
+    width: 70%;
+    height: auto;
+    margin: auto;
+
+    }
+
+
+    h1 {
+        font-size: 12px;
+    }
+
+    h6 {
+        margin: 0;
+        font-size: 7px;
+    }
+
+    p {
+        font-size: 9px;
+    }
+
+    button {
+        height: 20px;
+        width: 75px;
+        font-size: 7px;
+
+    }
+    footer {
+
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        /* position: relative; */
+        }
+  
+
+}
+
+@media (min-width:301px) and (max-width:900px){
+
+    nav{
+        width: 100%;
+    }
+     .header {
+        display: grid;
+        /* grid-template-rows: 50% 50%; */
+        grid-template-columns: 50% 50%;
+        grid-gap: 1em;
+        align-items: center;
+        justify-content: center;
+        grid-template-areas:
+            "img home";
+    }
+
+    .header img {
+        margin: auto;
+        width: 60%;
+    }
+    .cards{
+        grid-template-columns: 50% 50% ;
+        grid-template-rows: 1fr ;
+        grid-gap: 5px;
+    }
+
+    #card1,
+    #card2,
+    #card3,
+    #card4 {
+    min-width: 80%;
+    max-width: 100%;
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 5px;
+    grid-template-areas:
+        "image"
+        "detail";
+    }
+    
+    .im {
+    grid-area: image;
+    width: 70%;
+    height: auto;
+    margin: auto;
+    display: block;
+
+    }
+
+
+    h1 {
+        font-size: 15px;
+    }
+
+    h6 {
+        margin: 0;
+        font-size: 7px;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    button {
+        height: 20px;
+        width: 75px;
+        font-size: 7px;
+
+    }
+    footer {
+
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        position: relative; 
+        } 
+}
+
+@media (min-width:901px) {
+  
+
+    .header img {
+        width: 20%;
+        padding-top: 10px;
+    }
+    .Links {
+        padding: 0%;
+        /* padding-left: 20px; */
+    }
+    #card1,
+    #card2,
+    #card3,
+    #card4 {
+        justify-content: center;
+        align-items: center;
+        grid-gap: 6px; 
+      
+
+    }
+    .im {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+
+    }
+    .info{
+        height: 15vw;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+ 
+   h1 {
+        font-size: 18px;
+    }
+
+    h6 {
+        margin: 0;
+        font-size: 9px;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    button {
+        height: 20px;
+        width: 80px;
+        font-size: 9px;
+
+    }
+    footer {
+
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        position: relative; 
+        }  
+}
