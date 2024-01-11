@@ -1,0 +1,9 @@
+@import "./blog.css";
+@import "./blog-homepage.css";
+@import "./blog-mobile-tablets.css";
+@import "./blogpost-responsive.css";
+@import "./blog-mobil-tablet.css" (max-width:300px); 
+@import "./blog-mobil-tablet.css" (min-width:301px) and (max-width:900px);
+@import "./blog-mobil-tablet.css" (min-width:901px); 
+@import "./blogpost-responsive.css" (max-width:300px);
+@import "./blogpost-responsive.css" (min-width:301px) and (max-width:900px);
